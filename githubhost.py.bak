@@ -4,10 +4,10 @@ import os
 
 # GitHub hosts文件URL
 GITHUB_HOSTS_URL = 'https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts'
-# 设置本地更新时间文件和输出文件的路径
-OUTPUT_DIRECTORY = "/home/ubuntu/host/"
-LOCAL_UPDATE_TIME_FILE = os.path.join(OUTPUT_DIRECTORY, "last_update_time.txt")
-OUTPUT_FILE = os.path.join(OUTPUT_DIRECTORY, "GitHubHost.plugin")
+# 本地更新时间文件
+LOCAL_UPDATE_TIME_FILE = "last_update_time.txt"
+# 输出文件名
+OUTPUT_FILE = "GitHubHost.plugin"
 
 def fetch_github_hosts():
     """获取最新的GitHub hosts文件内容。"""
@@ -54,9 +54,6 @@ def save_local_update_time(update_time):
         file.write(update_time)
 
 def main():
-    # 创建输出目录（如果不存在）
-    os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
-
     # 获取hosts文件内容
     hosts_content = fetch_github_hosts()
     if hosts_content is None:
