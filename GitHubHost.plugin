@@ -1,5 +1,5 @@
 #!name= GitHub Host
-#!desc= # Update time: 2025-04-10T18:06:49+08:00
+#!desc= # Update time: 2025-04-11T18:06:48+08:00
 [Host]
 alive.github.com = 140.82.113.25
 api.github.com = 140.82.112.5
